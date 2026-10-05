@@ -99,6 +99,14 @@ public class ArchiveBasedAnalysisInputLocation extends PathBasedAnalysisInputLoc
       Path path,
       SourceType srcType,
       List<BodyInterceptor> bodyInterceptors,
+      Set<AnalysisExtendedScope> extendedScope) {
+    super(path, srcType, bodyInterceptors, Collections.singletonList(Paths.get("/META-INF")), extendedScope);
+  }
+
+  public ArchiveBasedAnalysisInputLocation(
+      Path path,
+      SourceType srcType,
+      List<BodyInterceptor> bodyInterceptors,
       Collection<Path> ignoredPaths,
       Set<AnalysisExtendedScope> extendedScope) {
     super(path, srcType, bodyInterceptors, ignoredPaths, extendedScope);

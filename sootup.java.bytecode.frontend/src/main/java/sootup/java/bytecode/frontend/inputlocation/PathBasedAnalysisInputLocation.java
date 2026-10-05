@@ -162,7 +162,7 @@ public abstract class PathBasedAnalysisInputLocation implements AnalysisInputLoc
     } else if (PathUtils.isArchive(path)) {
       if (PathUtils.hasExtension(path, FileType.JAR)) {
         return new ArchiveBasedAnalysisInputLocation(
-            path, srcType, bodyInterceptors, ignoredPaths, extendedScope);
+            path, srcType, bodyInterceptors, extendedScope);
       } else if (PathUtils.hasExtension(path, FileType.WAR)) {
         try {
           return new WarArchiveAnalysisInputLocation(
